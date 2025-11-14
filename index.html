@@ -1,98 +1,445 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mo Gao — Portfolio</title>
-  <meta name="description" content="Kuruktag Emissions Consulting founder. Methane sensing & reconciliation. Selected projects and publications." />
+  <meta name="description"
+    content="Kuruktag Emissions Consulting founder. Methane sensing & reconciliation. Selected projects and publications." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b1020; --card:#111735; --muted:#8ea2c7; --text:#e8f0ff; --accent:#6ee7b7; --chip:#1b2447;
+    :root {
+      --bg: #e1eedd;
+      --card: #fefbe9;
+      --muted: #666666;
+      --text: #000000;
+      --accent: #e1eedd;
+      --chip: #e1eedd;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:linear-gradient(180deg,#0b1020,#0d1430 40%,#0b1020); color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1080px;margin:0 auto;padding:32px}
-    header{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .brand{display:flex;gap:16px;align-items:center}
-    .avatar{width:64px;height:64px;border-radius:50%;border:2px solid #26325e;background:#26325e url('https://avatars.githubusercontent.com/u/10672507?v=4') center/cover}
-    h1{margin:0;font-size:28px;letter-spacing:.2px}
-    .tagline{color:var(--muted);margin-top:4px;font-size:14px}
-    nav a{opacity:.9;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,0.05)}
-    nav a:hover{background:rgba(255,255,255,0.12)}
-    .hero{margin-top:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    .card{background:var(--card);border:1px solid #1c2750;border-radius:20px;padding:22px}
-    .card h2{margin:0 0 12px 0;font-size:20px}
-    .about p{color:var(--muted);line-height:1.6;margin:0}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{background:var(--chip);border:1px solid #253061;padding:6px 10px;border-radius:999px;font-size:12px;color:#bcd0ff}
-    .section{margin-top:28px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .repo{display:flex;flex-direction:column;gap:10px}
-    .repo h3{font-size:16px;margin:0}
-    .repo .meta{display:flex;gap:10px;flex-wrap:wrap;color:#a8b7df;font-size:12px}
-    .repo p{margin:0;color:#b9c7ee}
-    .repo .btn{margin-top:auto;align-self:flex-start}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:#1f2a52;border:1px solid #29407e;padding:8px 12px;border-radius:10px;font-weight:600}
-    .btn:hover{background:#263162}
-    .footer{margin:28px 0;color:#8ea2c7;font-size:13px}
-    .empty{color:#9db2e9;font-size:14px}
-    @media (max-width:960px){.grid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+      background: #e1eedd;
+      color: var(--text)
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px
+    }
+
+    header {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap
+    }
+
+    .brand {
+      display: flex;
+      gap: 16px;
+      align-items: center
+    }
+
+    .avatar {
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      border: 2px solid #000000;
+      background: #fefbe9 url('avatar.png') center/cover
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: .2px;
+      color: #000000;
+    }
+
+    .tagline {
+      color: #666666;
+      margin-top: 4px;
+      font-size: 14px
+    }
+
+    nav a {
+      opacity: .9;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.1);
+      color: #000000;
+    }
+
+    nav a:hover {
+      background: rgba(0, 0, 0, 0.15)
+    }
+
+    .hero {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #000000;
+      border-radius: 20px;
+      padding: 22px;
+      color: var(--text);
+    }
+
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 20px
+    }
+
+    .about p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .chip {
+      background: #fefbe9;
+      border: 1px solid #000000;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #000000
+    }
+
+    .section {
+      margin-top: 28px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #fefbe9;
+      border: 1px solid #e1eedd;
+      border-radius: 12px;
+      padding: 16px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: #000000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fefbe9;
+      border: 1px solid #000000;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-card h3 {
+      font-size: 16px;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .project-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-link:hover {
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e1eedd;
+      border: 1px solid #000000;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .btn:hover {
+      background: #fefbe9
+    }
+
+    .footer {
+      margin: 28px 0;
+      color: #000000;
+      font-size: 13px
+    }
+
+    .empty {
+      color: #000000;
+      font-size: 14px
+    }
+
+    #publications ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #publications li {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #000000;
+    }
+
+    #publications li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    @media (max-width:960px) {
+      .grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .hero {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width:640px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
         <div class="avatar"></div>
         <div>
-          <h1>Mo (Mozhou) Gao</h1>
-          <div class="tagline">Methane emissions · Sensing & reconciliation · Founder, Kuruktag Emissions Consulting</div>
+          <h1>Mozhou(Mo) Gao</h1>
+          <div class="tagline">Opionionated and Judgemental
+          </div>
         </div>
       </div>
       <nav>
         <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
+        <a href="#publications">Selected Publications</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <section class="hero">
       <div class="card about">
-        <h2>About</h2>
+        <h2>Welcome!</h2>
         <p>
-          I build measurement & data systems to detect, quantify, and reconcile methane emissions across oil & gas assets — integrating satellites (e.g., TROPOMI), aerial, mobile, and stationary sensing with operational data and reporting frameworks (MIQ, Veritas, OGMP 2.0).
+          I am a GISer focused on reducing anthropogenic greenhouse gas emissions and
+          optimizing emissions detection technologies. I obtained my PhD from the Centre for
+          Smart Emissions Sensing Technologies and worked as a Postdoctoral Researcher
+          at the UbiSensing & AI Lab at the University of Calgary. My research involves using
+          various modeling approaches and building digital twins to simulate how different
+          emissions detection and quantification technologies perform under real oil and gas field
+          conditions. This work helps improve understanding of their performance and optimal
+          deployment strategies. I also develop frameworks to integrate multi-scale emissions
+          data to estimate and reconcile emissions from oil and gas facilities.
         </p>
+
         <div class="chips">
-          <span class="chip">Python</span>
+          <span class="chip">Methane Emissions</span>
+          <span class="chip">GIS</span>
+          <span class="chip">Python & R</span>
+          <span class="chip">Statistics</span>
           <span class="chip">TensorFlow & PyTorch</span>
           <span class="chip">Remote Sensing</span>
-          <span class="chip">GIS</span>
-          <span class="chip">Reconciliation</span>
-          <span class="chip">SCADA + Emissions</span>
         </div>
-      </div>
-      <div class="card">
-        <h2>Quick links</h2>
+
+        <hr style="border:0; border-top:1px solid #000000; margin:24px 0;">
+
+        <h3> Use the links below to explore my papers, projects, and more.</h3>
         <div class="chips">
-          <a class="chip" href="https://github.com/MozhouGao" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" href="mailto:mozhuogao@gmail.com">Email</a>
-          <a class="chip" href="#projects">Repos</a>
-          <a class="chip" href="#publications">Papers</a>
+          <a class="chip" href="https://mozhougao.github.io/" target="_blank" rel="noopener">
+            <img src="https://www.google.com/s2/favicons?sz=32&domain=mozhougao.github.io" alt="" width="16"
+              height="16">
+            Personal Website
+          </a>
+
+          <a class="chip" href="https://www.linkedin.com/in/mozhou-gao-28b744103" target="_blank" rel="noopener">
+            <img src="https://www.google.com/s2/favicons?sz=32&domain=linkedin.com" alt="" width="16" height="16">
+            LinkedIn
+          </a>
+
+          <a class="chip" href="https://github.com/MozhouGao" target="_blank" rel="noopener">
+            <img src="https://www.google.com/s2/favicons?sz=32&domain=github.com" alt="" width="16" height="16">
+            GitHub
+          </a>
+
+          <a class="chip" href="https://scholar.google.com/citations?user=rmewGLEAAAAJ&hl=en" target="_blank"
+            rel="noopener">
+            <img src="https://www.google.com/s2/favicons?sz=32&domain=scholar.google.com" alt="" width="16" height="16">
+            Google Scholar
+          </a>
+
+          <a class="chip" href="https://orcid.org/0000-0002-9730-4953" target="_blank" rel="noopener">
+            <img src="https://www.google.com/s2/favicons?sz=32&domain=orcid.org" alt="" width="16" height="16">
+            ORCID
+          </a>
+
+          <a class="chip" href="https://www.webofscience.com/wos/author/record/NOF-7039-2025" target="_blank"
+            rel="noopener">
+            <img src="https://www.google.com/s2/favicons?sz=32&domain=webofscience.com" alt="" width="16" height="16">
+            Clarivate
+          </a>
         </div>
       </div>
     </section>
 
+
     <section id="projects" class="section">
       <div class="card">
         <h2>Projects & Repositories</h2>
-        <div id="repo-grid" class="grid" role="list"></div>
-        <div id="repo-empty" class="empty" hidden>Couldn’t load repositories. Check your network or try again later.</div>
+        <div id="repo-grid" class="grid" role="list">
+          <article class="project-card" role="listitem">
+            <a href="https://github.com/MozhouGao/UAV_Flyability" target="_blank" rel="noopener noreferrer"
+              class="project-link">
+              <div class="project-image">
+                <img src="Global_Drone_Maps.JPG" alt="Global Drone Flyability Mapping visualization">
+              </div>
+              <h3>Global Drone Flyability Mapping</h3>
+              <p>Mapping drone flyability across the globe using ERA5 weather data and various drone's manufacturer
+                SPECs.</p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://github.com/MozhouGao/Global-TROPOMI-Observatioanl-Coverage" target="_blank"
+              rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="Global_TROPOMI_Coverage.JPG" alt="Gloal TROPOMI Days Mapping visualization">
+              </div>
+              <h3>Gloal TROPOMI Methane Emissions Observation Coverage Mapping</h3>
+              <p>Mapping methane emissions observation coverage of low-earth orbit satellites across the globe using
+                TROPOMI's data.</p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://github.com/MozhouGao/Leak-Inspection-Simulation-Model" target="_blank"
+              rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="Coop-LDAR.png" alt="Project 3 visualization">
+              </div>
+              <h3>Cooperative leak inspection simulation toolkit</h3>
+              <p>A toolkit for simulating travel of leak inspection strategies and evaluating their effectiveness.
+              </p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://github.com/MozhouGao/DRIP" target="_blank" rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="DRIP.JPG" alt="Project 4 visualization">
+              </div>
+              <h3>Downwind road intersection point (DRIP)</h3>
+              <p>Using DRIP to find the optimal survey route for vehicle-based gas sensing system.</p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://github.com/MozhouGao/TROPOMI_Daily_Screening_Toolkit" target="_blank"
+              rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="TROPOMI_toolkit.JPG" alt="Project 5 visualization">
+              </div>
+              <h3>TROPOMI Daily Methane Screening Toolkit</h3>
+              <p>This tool is still in development. It aims to automatically screen a region and detect and quantify
+                emissions using TROPOMI's data.</p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://ldarsim.ca/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="LDAR-sim.JPG" alt="Project 6 visualization">
+              </div>
+              <h3>Leak Detection and Repair Simulator (LDAR-sim)</h3>
+              <p>The open-source modeling framework for exploring the effectiveness of methane leak detection programs.
+              </p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://github.com/MozhouGao/Reconciliation_with_emission_events" target="_blank"
+              rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="Event_framework.png" alt="Project 7 visualization">
+              </div>
+              <h3>Event-based methane emissions estimation framework</h3>
+              <p>A event-based framework embeded with ISO/OGC standards to ultilize emission event to estimate
+                annualized emissions.</p>
+            </a>
+          </article>
+          <article class="project-card" role="listitem">
+            <a href="https://www.mdpi.com/2072-4292/17/18/3143" target="_blank"
+              rel="noopener noreferrer" class="project-link">
+              <div class="project-image">
+                <img src="hybrid regional method.png" alt="Project 7 visualization">
+              </div>
+              <h3>Combine regional divergence emissions estimation and event-based emissions estimation</h3>
+              <p>This project aims to integrate quantifications from point-source plumes and regional estimates from satellites to directly address
+                the underestimation of short-duration, large-emission events in emissions estimation.</p>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -100,8 +447,58 @@
       <div class="card">
         <h2>Selected Publications</h2>
         <ul>
-          <li><strong>Global observational coverage of onshore O&G methane with TROPOMI</strong> (2023) — <a target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10555993/">Open access</a></li>
-          <li><strong>City‑level methane emissions from Calgary via satellite</strong> (2024) — <a target="_blank" rel="noopener" href="https://www.mdpi.com/2072-4292/16/7/1149">Remote Sensing</a></li>
+          <li>
+            <strong>
+              <a target="_blank" rel="noopener" href="https://doi.org/10.3390/rs17183143">
+                Estimating Methane Emissions by Integrating Satellite Regional Emissions Mapping and Point-Source
+                Observations: Case Study in the Permian Basin.
+              </a>
+            </strong>
+            (2025) — Remote Sensing
+          </li>
+          <li>
+            <strong>
+              <a target="_blank" rel="noopener" href="https://doi.org/10.1525/elementa.2023.00030">
+                A cooperative model to lower cost and increase the efficiency of methane leak inspections at oil and gas
+                sites.
+              </a>
+            </strong>
+            (2023) — Elementa: Science of the Anthropocene
+          </li>
+          <li>
+            <strong>
+              <a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41598-023-41914-8">
+                Global observational coverage of oil and gas methane sources with TROPOMI.
+              </a>
+            </strong>
+            (2023) — Nature Scientific Reports
+          </li>
+          <li>
+            <strong>
+              <a target="_blank" rel="noopener" href="http://doi.org/10.1080/109622 47.2022.2113182">
+                Development and validation of a route planning methodology for vehicle-based remote measurements of
+                methane and other emissions from oil and gas wells and facilities.
+              </a>
+            </strong>
+            (2022) — Journal of the Air & Waste Management Association
+          </li>
+          <li>
+            <strong>
+              <a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41598-021-91325-w">
+                Weather constraints on global drone flyability.
+              </a>
+            </strong>
+            (2021) — Nature Scientific Reports
+          </li>
+          <li>
+            <strong>
+              <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jclepro.2020.125237">
+                An agent-based model for estimating emissions reduction equivalence among leak detection and repair
+                programs.
+              </a>
+            </strong>
+            (2021) — Journal of Cleaner Production
+          </li>
         </ul>
       </div>
     </section>
@@ -109,68 +506,20 @@
     <section id="contact" class="section">
       <div class="card">
         <h2>Contact</h2>
-        <p>Open to collaborations, consulting, and product partnerships in emissions management.</p>
-        <a class="btn" href="mailto:mozhuogao@gmail.com">Email me</a>
+        <p>Open to collaborations, consulting, and project partnerships in emissions management.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn" href="mailto:mozhuogao@gmail.com">Email me</a>
+          <a class="btn" href="CV.pdf" download>Download My CV</a>
+        </div>
       </div>
     </section>
 
-    <footer class="footer">© <span id="yr"></span> Mo Gao</footer>
+    <footer class="footer">© <span id="yr"></span> Mozhou Gao</footer>
   </div>
 
   <script>
-  const username = 'MozhouGao';
-  const featured = new Set([
-    'TROPOMI_Daily_Screening_Toolkit',
-    'Global-TROPOMI-Observatioanl-Coverage',
-    'Reconciliation_with_emission_events',
-    'Leak-Inspection-Simulation-Model',
-    'DRIP'
-  ]);
-
-  function fmtDate(iso){
-    try{ return new Date(iso).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) }catch{ return iso }
-  }
-
-  function repoCard(r){
-    const desc = r.description || '—';
-    const lang = r.language || '—';
-    return `
-      <article class="repo card" role="listitem">
-        <h3><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h3>
-        <p>${desc}</p>
-        <div class="meta">
-          <span>★ ${r.stargazers_count}</span>
-          <span>• ${lang}</span>
-          <span>• Updated ${fmtDate(r.updated_at)}</span>
-        </div>
-        <a class="btn" href="${r.html_url}" target="_blank" rel="noopener">View on GitHub</a>
-      </article>`;
-  }
-
-  async function loadRepos(){
-    const grid = document.getElementById('repo-grid');
-    const empty = document.getElementById('repo-empty');
-    try{
-      const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
-      if(!res.ok) throw new Error('HTTP '+res.status);
-      /** @type {Array} */
-      const data = await res.json();
-      // sort: featured first, then by updated
-      const sorted = data.sort((a,b)=>{
-        const af = featured.has(a.name), bf = featured.has(b.name);
-        if(af && !bf) return -1; if(bf && !af) return 1;
-        return new Date(b.updated_at) - new Date(a.updated_at);
-      });
-      grid.innerHTML = sorted.map(repoCard).join('');
-      if(sorted.length===0){ empty.hidden=false }
-    }catch(e){
-      console.error(e); empty.hidden=false;
-    }
-  }
-
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  loadRepos();
+    document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
 
+</html>
